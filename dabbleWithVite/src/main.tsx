@@ -19,4 +19,4 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 // Breaks down the process of root creation.
 // const rootElement = document.getElementById("root") as HTMLElement;
 // const root = ReactDOM.createRoot(rootElement);
-// root.render(<div>Whao!</div>);
+// root.render(<div>Whoa!</div>);
