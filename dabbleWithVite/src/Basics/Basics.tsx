@@ -21,5 +21,16 @@ const NestedList = function () {
   );
 };
 
+const TestingJSX = function () {
+  const button = (
+    <div>
+      <h1>This is a button!</h1>
+      <Button />
+    </div>
+  );
+  console.log(button);
+  return button;
+};
+
 export default Basics;
-export { NestedList };
+export { NestedList, TestingJSX };
