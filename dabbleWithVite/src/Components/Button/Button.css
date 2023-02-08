@@ -1,0 +1,10 @@
+.basicButton {
+    background-color: coral;
+    border: none;
+    border-radius: 0.25rem;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    padding: 1em;
+
+}
