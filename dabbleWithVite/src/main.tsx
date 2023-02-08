@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Basics, { TestingJSX } from "./Basics/Basics";
+import Basics, { JSXNavBar, TestingJSX } from "./Basics/Basics";
 import { NestedList } from "./Basics/Basics";
 import Button from "./Components/Button/Button";
 // import App from "./App";
@@ -12,6 +12,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <Basics />
     <NestedList />
     <TestingJSX />
+    <JSXNavBar />
   </React.StrictMode>
 );
 
