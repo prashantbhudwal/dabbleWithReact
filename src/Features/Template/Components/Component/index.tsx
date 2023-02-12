@@ -1,6 +1,6 @@
 import "./index.css";
 function TemplateComponent() {
-  return <p>Template</p>;
+  return <p>Does this work?</p>;
 }
 
 export default TemplateComponent;
