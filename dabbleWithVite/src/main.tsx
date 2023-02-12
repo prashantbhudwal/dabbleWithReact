@@ -1,15 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Basics, { JSXNavBar, TestingJSX } from "./Basics/Basics";
-import { NestedList } from "./Basics/Basics";
-import Button from "./Components/Button/Button";
-import Template from "./Features/Template";
-// import App from "./App";
-// import "./index.css";
+import App from "./Features/Template/App";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Template />
+    <App />
   </React.StrictMode>
 );
 
@@ -17,10 +12,3 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 // const rootElement = document.getElementById("root") as HTMLElement;
 // const root = ReactDOM.createRoot(rootElement);
 // root.render(<div>Whoa!</div>);
-/*
-<App />
-<Basics />
-<NestedList />
-<TestingJSX />
-<JSXNavBar />
-*/
