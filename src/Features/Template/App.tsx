@@ -1,11 +1,14 @@
 import "./App.css";
-import TemplateComponent from "./Components/Component";
+import Contact from "./Components/Contact";
 function App() {
   return (
-    <>
-      <TemplateComponent />
-      <TemplateComponent />
-    </>
+    <div className="contacts">
+      <Contact />
+      <Contact />
+      <Contact />
+      <Contact />
+    </div>
   );
 }
+
 export default App;
