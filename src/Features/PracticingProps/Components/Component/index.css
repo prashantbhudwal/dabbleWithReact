@@ -1,0 +1,16 @@
+.cardContainer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1em;
+    background-color: azure;
+    max-width: 300px;
+
+}
+
+.setup {
+    font-weight: bolder;
+
+}
+
+.punchline {
+    font-style: italic;
+}
