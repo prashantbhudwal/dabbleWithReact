@@ -1,7 +1,6 @@
 import "./App.css";
 import jokes from "./jokes";
 import Joke from "./Components/Component";
-import TemplateComponent from "./Components/Component";
 function App() {
   return (
     <>
