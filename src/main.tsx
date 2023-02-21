@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import App from "./Features/AutoRenderingArrays/App";
-import App from "./Features/PracticingProps/App";
+import App from "./learningTs/BasicTs/App";
 // import "./main.css";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
