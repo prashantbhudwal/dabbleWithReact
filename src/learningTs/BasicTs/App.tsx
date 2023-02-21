@@ -1,5 +1,4 @@
 import "./App.css";
-import TemplateComponent from "./Components/Component";
 
 const basicTs = function () {
   // Use console Ninja Extension
