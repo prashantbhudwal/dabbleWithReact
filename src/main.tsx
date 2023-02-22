@@ -10,7 +10,4 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>
 );
 
-// Breaks down the process of root creation.
-// const rootElement = document.getElementById("root") as HTMLElement;
-// const root = ReactDOM.createRoot(rootElement);
-// root.render(<div>Whoa!</div>);
+
