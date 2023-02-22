@@ -18,8 +18,8 @@
   },
   "include": [
     "src",
-    "src/Features/FirstComponent/Basics",
-    "src/Features/FirstComponent/Components/Button"
+    "src/dabble/Features/FirstComponent/Basics",
+    "src/dabble/Features/FirstComponent/Components/Button"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
