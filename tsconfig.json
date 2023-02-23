@@ -20,6 +20,6 @@
     "src",
     "src/learningReact/Basics/FirstComponent/Basics",
     "src/learningReact/Basics/FirstComponent/Components/Button"
-, "AppTemplate"  ],
+, "Current"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
