@@ -18,8 +18,8 @@
   },
   "include": [
     "src",
-    "src/libarary/Features/FirstComponent/Basics",
-    "src/libarary/Features/FirstComponent/Components/Button"
+    "src/learningReact/Basics/FirstComponent/Basics",
+    "src/learningReact/Basics/FirstComponent/Components/Button"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
