@@ -12,7 +12,7 @@ function useTime(): Date {
   return time;
 }
 
-export default function App(): JSX.Elements {
+export default function App(): JSX.Element {
   const time = useTime();
   return <Clock time={time} />;
 }
