@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Clock from "./Clock";
 
-function useTime() {
+function useTime(): Date {
   const [time, setTime] = useState(() => new Date());
   useEffect(() => {
     const id = setInterval(() => {
@@ -12,7 +12,7 @@ function useTime() {
   return time;
 }
 
-export default function App() {
+export default function App(): JSX.Elements {
   const time = useTime();
   return <Clock time={time} />;
 }

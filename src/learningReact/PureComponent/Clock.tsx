@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+interface ClockProps {
+  time: Date;
+}
+
 const StyledClock = styled.div`
   .day {
     background: #2ff;
@@ -11,7 +15,7 @@ const StyledClock = styled.div`
   }
 `;
 
-export default function Clock({ time }) {
+export default function Clock({ time }: ClockProps): JSX.Element {
   let hours = time.getHours();
   let className;
   if (hours >= 0 && hours <= 6) {
