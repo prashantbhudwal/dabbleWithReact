@@ -7,11 +7,15 @@ import ThemeContext from "./themeContext";
 const StyledApp = styled.div``;
 
 function App() {
+  const switchTheme = function () {
+    console.log("Switched");
+  };
+
   return (
     <ThemeContext.Provider value={"light"}>
       <StyledApp>
         <Header />
-        <Button />
+        <Button handleClick={switchTheme} />
       </StyledApp>
     </ThemeContext.Provider>
   );
