@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
+import Box from "./Box";
 import boxesArray from "./boxes";
 
 const StyledApp = styled.div`
@@ -13,17 +14,6 @@ const StyledApp = styled.div`
   background-color: silver;
 `;
 
-interface StyledBoxProps {
-  isDark: boolean;
-}
-
-const StyledBox = styled.div<StyledBoxProps>`
-  background-color: ${(props) => (props.isDark ? "black" : "white")};
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-`;
 interface Boxes {
   id: number;
   on: boolean;
@@ -31,8 +21,25 @@ interface Boxes {
 export default function App(): JSX.Element {
   const [boxes, setBoxes] = useState<Boxes[]>(boxesArray);
 
+  const toggleDarkMode = function (boxId: number) {
+    const getNewBoxState = function (oldBoxState: Boxes[]): Boxes[] {
+      const newBoxState = oldBoxState.map((box) => {
+        if (box.id === boxId) {
+          return { ...box, on: !box.on };
+        } else return box;
+      });
+      return newBoxState;
+    };
+
+    setBoxes((oldBoxState) => getNewBoxState(oldBoxState));
+  };
+
   const boxArray = boxes.map((box) => (
-    <StyledBox key={box.id} isDark={box.on}></StyledBox>
+    <Box
+      key={box.id}
+      isDark={box.on}
+      handleClick={() => toggleDarkMode(box.id)}
+    ></Box>
   ));
   return <StyledApp>{boxArray}</StyledApp>;
 }
