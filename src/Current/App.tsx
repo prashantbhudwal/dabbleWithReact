@@ -3,25 +3,36 @@ import { useState } from "react";
 import boxesArray from "./boxes";
 
 const StyledApp = styled.div`
-  div {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-  }
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  background-color: silver;
 `;
 
-export default function App(): JSX.Element {
-  interface Boxes {
-    id: number;
-    on: boolean;
-  }
+interface StyledBoxProps {
+  isDark: boolean;
+}
 
+const StyledBox = styled.div<StyledBoxProps>`
+  background-color: ${(props) => (props.isDark ? "black" : "white")};
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+`;
+interface Boxes {
+  id: number;
+  on: boolean;
+}
+export default function App(): JSX.Element {
   const [boxes, setBoxes] = useState<Boxes[]>(boxesArray);
 
-  const boxArray = boxes.map((box) => <div key={box.id}></div>);
-  return (
-    <StyledApp>
-      <h1>{boxArray}</h1>
-    </StyledApp>
-  );
+  const boxArray = boxes.map((box) => (
+    <StyledBox key={box.id} isDark={box.on}></StyledBox>
+  ));
+  return <StyledApp>{boxArray}</StyledApp>;
 }
