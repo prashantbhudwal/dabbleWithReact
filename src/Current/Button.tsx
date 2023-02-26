@@ -1,5 +1,5 @@
-import { ThemeContextProvider } from "./themeContext";
 import { useContext } from "react";
+import { ThemeContext } from "./themeContext";
 
 type clickHandler = () => void;
 interface handleClick {
@@ -7,7 +7,7 @@ interface handleClick {
 }
 
 function Button({ handleClick }: handleClick) {
-  const theme = useContext(ThemeContextProvider);
+ const theme = useContext(ThemeContext);
   return (
     <button className={`${theme}-theme`} onClick={handleClick}>
       Switch Theme

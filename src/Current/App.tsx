@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
 import Button from "./Button";
 import Header from "./Header";
 import "./styles.css";
-import { ThemeContextProvider } from "./themeContext";
+import { ThemeProvider } from "./ThemeProvider";
 
 function App() {
   const switchTheme = function () {
@@ -11,10 +10,10 @@ function App() {
   };
 
   return (
-    <ThemeContextProvider>
-      {/* <Header /> */}
+    <ThemeProvider>
+      <Header />
       <Button handleClick={switchTheme} />
-    </ThemeContextProvider>
+    </ThemeProvider>
   );
 }
 export default App;
