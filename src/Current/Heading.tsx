@@ -1,5 +1,5 @@
-import { useContext } from "react";
 import { LevelContext } from "./LevelContext";
+import { useContext } from "react";
 
 export default function Heading({ children }) {
   const level = useContext(LevelContext);
