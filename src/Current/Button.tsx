@@ -6,10 +6,10 @@ interface handleClick {
   handleClick: clickHandler;
 }
 
-function Button({ handleClick }: handleClick) {
- const theme = useContext(ThemeContext);
+function Button() {
+ const [theme, toggleTheme] = useContext(ThemeContext);
   return (
-    <button className={`${theme}-theme`} onClick={handleClick}>
+    <button className={`${theme}-theme`} onClick={toggleTheme}>
       Switch Theme
     </button>
   );
