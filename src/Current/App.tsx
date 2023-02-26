@@ -1,26 +1,20 @@
-import Heading from "./Heading.js";
-import Section from "./Section.js";
+import styled from "@emotion/styled";
+import { useState } from "react";
+import Button from "./Button";
+import Header from "./Header";
 import "./styles.css";
+import { ThemeContextProvider } from "./themeContext";
 
-export default function Page() {
+function App() {
+  const switchTheme = function () {
+    console.log("Switched");
+  };
+
   return (
-    <Section>
-      <Heading>Title</Heading>
-      <Section>
-        <Heading>Heading</Heading>
-        <Heading>Heading</Heading>
-        <Heading>Heading</Heading>
-        <Section>
-          <Heading>Sub-heading</Heading>
-          <Heading>Sub-heading</Heading>
-          <Heading>Sub-heading</Heading>
-          <Section>
-            <Heading>Sub-sub-heading</Heading>
-            <Heading>Sub-sub-heading</Heading>
-            <Heading>Sub-sub-heading</Heading>
-          </Section>
-        </Section>
-      </Section>
-    </Section>
+    <ThemeContextProvider>
+      {/* <Header /> */}
+      <Button handleClick={switchTheme} />
+    </ThemeContextProvider>
   );
 }
+export default App;
