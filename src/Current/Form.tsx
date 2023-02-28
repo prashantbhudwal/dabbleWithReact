@@ -21,7 +21,11 @@ const Input = styled.input`
 `;
 
 export default function Form() {
-  const [formData, setFormData] = useState({ firstName: "", lastName: "" });
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
 
   console.log(formData.firstName, formData.lastName);
 
@@ -51,6 +55,16 @@ export default function Form() {
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
+        />
+      </label>
+      <label>
+        <Input
+          type={"email"}
+          placeholder="Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
         />
       </label>
     </StyledForm>
