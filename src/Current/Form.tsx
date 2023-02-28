@@ -22,18 +22,8 @@ const Input = styled.input`
 export default function Form() {
   return (
     <StyledForm>
-      <div>Dog</div>
       <label>
-        {" Primary Email"}
-        <Input
-          type={"text"}
-          placeholder="Tedt"
-          list="awards"
-          // defaultValue={primaryEmail}
-        />
-        {/* <datalist id={"awards"}>
-          <select defaultValue={"test"}>{emailOptions}</select>
-        </datalist> */}
+        <Input type={"text"} placeholder="Name" />
       </label>
     </StyledForm>
   );
