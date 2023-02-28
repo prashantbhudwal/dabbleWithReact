@@ -25,9 +25,15 @@ export default function Form() {
     firstName: "",
     lastName: "",
     email: "",
+    comments: "",
   });
 
-  console.log(formData.firstName, formData.lastName);
+  console.log(
+    formData.firstName,
+    formData.lastName,
+    formData.email,
+    formData.comments
+  );
 
   const handleChange = function (event: any) {
     console.log(event.target.name);
@@ -63,6 +69,15 @@ export default function Form() {
           placeholder="Email"
           name="email"
           value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </label>
+      <label>
+        <textarea
+          placeholder="Any suggestions?"
+          name="comments"
+          value={formData.comments}
           onChange={handleChange}
           required
         />
