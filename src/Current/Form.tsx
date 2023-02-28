@@ -21,7 +21,17 @@ const Input = styled.input`
 `;
 
 export default function Form() {
-  const [firstName, setFirstName] = useState("");
+  const [formData, setFormData] = useState({ firstName: "", lastName: "" });
+
+  console.log(formData.firstName, formData.lastName);
+
+  const handleChange = function (event: any) {
+    console.log(event.target.name);
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [event.target.name]: [event.target.value],
+    }));
+  };
 
   return (
     <StyledForm>
@@ -30,8 +40,17 @@ export default function Form() {
           type={"text"}
           placeholder="First Name"
           name="firstName"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          value={formData.firstName}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        <Input
+          type={"text"}
+          placeholder="Last Name"
+          name="lastName"
+          value={formData.lastName}
+          onChange={handleChange}
         />
       </label>
     </StyledForm>
