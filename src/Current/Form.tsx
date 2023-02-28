@@ -26,13 +26,15 @@ export default function Form() {
     lastName: "",
     email: "",
     comments: "",
+    isGood: true,
   });
 
   console.log(
     formData.firstName,
     formData.lastName,
     formData.email,
-    formData.comments
+    formData.comments,
+    formData.isGood
   );
 
   const handleChange = function (event: any) {
@@ -80,6 +82,13 @@ export default function Form() {
           value={formData.comments}
           onChange={handleChange}
           required
+        />
+      </label>
+      <label>
+        <Input type={"checkbox"}
+          name="isGood"
+          checked={formData.isGood}
+          onChange={handleChange}
         />
       </label>
     </StyledForm>
