@@ -42,7 +42,7 @@ export default function Form() {
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
