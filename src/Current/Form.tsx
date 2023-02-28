@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useState } from "react";
 
 const StyledForm = styled.form`
   width: 500px;
@@ -20,10 +21,18 @@ const Input = styled.input`
 `;
 
 export default function Form() {
+  const [firstName, setFirstName] = useState("");
+
   return (
     <StyledForm>
       <label>
-        <Input type={"text"} placeholder="Name" />
+        <Input
+          type={"text"}
+          placeholder="First Name"
+          name="firstName"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
       </label>
     </StyledForm>
   );
