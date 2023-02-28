@@ -38,10 +38,11 @@ export default function Form() {
   );
 
   const handleChange = function (event: any) {
-    console.log(event.target.name);
+    const { name, value, checked, type } = event.target;
+
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [event.target.name]: [event.target.value],
+      [name]: value,
     }));
   };
 
@@ -85,7 +86,8 @@ export default function Form() {
         />
       </label>
       <label>
-        <Input type={"checkbox"}
+        <Input
+          type={"checkbox"}
           name="isGood"
           checked={formData.isGood}
           onChange={handleChange}
