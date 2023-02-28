@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
 
 const StyledForm = styled.form`
   width: 500px;
@@ -21,77 +20,10 @@ const Input = styled.input`
 `;
 
 export default function Form() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    comments: "",
-    isGood: true,
-  });
-
-  console.log(
-    formData.firstName,
-    formData.lastName,
-    formData.email,
-    formData.comments,
-    formData.isGood
-  );
-
-  const handleChange = function (event: any) {
-    const { name, value, checked, type } = event.target;
-
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
   return (
     <StyledForm>
       <label>
-        <Input
-          type={"text"}
-          placeholder="First Name"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        <Input
-          type={"text"}
-          placeholder="Last Name"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        <Input
-          type={"email"}
-          placeholder="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label>
-        <textarea
-          placeholder="Any suggestions?"
-          name="comments"
-          value={formData.comments}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label>
-        <Input
-          type={"checkbox"}
-          name="isGood"
-          checked={formData.isGood}
-          onChange={handleChange}
-        />
+        <Input type={"text"} placeholder="Name" />
       </label>
     </StyledForm>
   );
