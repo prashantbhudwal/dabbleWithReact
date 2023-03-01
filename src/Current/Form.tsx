@@ -39,11 +39,17 @@ export default function Form() {
     fullName: "",
     rating: "0",
     isRated: true,
+    userType: "",
   });
 
-  console.log(formState.fullName, formState.rating, formState.isRated);
+  console.log(
+    formState.fullName,
+    formState.rating,
+    formState.isRated,
+    formState.userType
+  );
 
-  const handleRatingChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleRatingChange = (e: any) => {
     const { name, value, checked, type } = e.target;
     setFormState((prevState) => ({
       ...prevState,
@@ -92,6 +98,17 @@ export default function Form() {
           checked={formState.rating === "3"}
         ></Input>
       </label>
+
+      <select
+        value={formState.userType}
+        name="userType"
+        onChange={handleRatingChange}
+      >
+        <option value={"free"}>Free User</option>
+        <option value={"proMonthly"}>Monthly Subscriber</option>
+        <option value={"proAnnual"}>Annual Subscriber</option>
+        <option value={"patron"}>Lifetime Patron</option>
+      </select>
       <button type="submit">Submit Rating</button>
     </StyledForm>
   );
