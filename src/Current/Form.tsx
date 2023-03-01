@@ -58,8 +58,17 @@ export default function Form() {
     }));
   };
 
+  const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    // Handling submit in vanilla HTML forms with its pre-existing state management
+    //const formData = new FormData(e.currentTarget);
+    // console.log(formData.get("fullName")); //--> to API
+    //
+    console.log(formState); // Can submit the state we created to the API
+  };
+
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit}>
       <Input
         type={"text"}
         placeholder="Full Name"
